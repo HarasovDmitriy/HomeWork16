@@ -1,5 +1,6 @@
 from app import db
 
+
 class User(db.Model):
     __tablename__ = "user"
     id = db.Column(db.Integer, primary_key=True)
@@ -23,7 +24,7 @@ class User(db.Model):
 
 
 class Order(db.Model):
-    #__tablename__ = "order"
+    __tablename__ = "order"
     id = db.Column(db.Integer, primary_key=True)
     name = db.Column(db.String)
     description = db.Column(db.String)
@@ -53,7 +54,7 @@ class Order(db.Model):
 
 
 class Offer(db.Model):
-    #__tablename__ = "offer"
+    __tablename__ = "offer"
     id = db.Column(db.Integer, primary_key=True)
 
     order_id = db.Column(db.Integer, db.ForeignKey(f"{Order.__tablename__}.id"))

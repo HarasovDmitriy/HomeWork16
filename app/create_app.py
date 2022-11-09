@@ -1,5 +1,6 @@
 import json
 from flask import Flask
+
 from app import db
 from app.models import Offer, Order, User
 
